@@ -1,11 +1,11 @@
-/* =========== GOOLE FONTS ============= */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
 
-/* =========== VARIABLES CSS =========== */
+/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
-  /* ======== Colors ========== */
+  /*========== Colors ==========*/
   --hue: 14;
   --first-color: hsl(var(--hue), 91%, 54%);
   --first-color-alt: hsl(var(--hue), 91%, 50%);
@@ -13,7 +13,7 @@
   --text-color: hsl(var(--hue), 4%, 85%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
 
-  /* ======== Green Gradient ======== */
+  /*Green gradient*/
   --body-color: linear-gradient(
     90deg,
     hsl(104, 28%, 40%) 0%,
@@ -25,22 +25,30 @@
     hsl(58, 28%, 35%) 100%
   );
 
-  /* ======== Font and Typography ========== */
+  /*Red gradient*/
+  /* --body-color: linear-gradient(90deg, hsl(360, 28%, 40%) 0%, hsl(18, 28%, 40%) 100%);
+  --container-color: linear-gradient(136deg, hsl(360, 28%, 35%) 0%, hsl(18, 28%, 35%) 100%); */
+
+  /*Black solid*/
+  /* --body-color: hsl(30, 8%, 8%);
+  --container-color: hsl(30, 8%, 10%); */
+
+  /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: 0.939rem;
+  --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /* ======= Font Weight =========== */
+  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-black: 900;
 
-  /* ======= Margenes Bottom ======== */
+  /*========== Margenes Bottom ==========*/
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -49,7 +57,7 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
 
-  /* ====== Z-index ======== */
+  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
@@ -67,6 +75,7 @@
   }
 }
 
+/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -91,7 +100,6 @@ h3,
 h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  /* text-align: center; */
 }
 
 ul {
@@ -110,8 +118,7 @@ img {
 button,
 input {
   border: none;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  outline: none;
 }
 
 button {
@@ -120,7 +127,7 @@ button {
   font-size: var(--normal-font-size);
 }
 
-/* =============== REUSABLE CSS CLASSES ==================== */
+/*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 4.5rem 0 2rem;
 }
@@ -131,9 +138,9 @@ button {
   text-align: center;
 }
 
-/* ============== LAYOUT =============== */
+/*=============== LAYOUT ===============*/
 .container {
-  max-width: 982px;
+  max-width: 968px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -143,10 +150,10 @@ button {
 }
 
 .main {
-  overflow: hidden;
+  overflow: hidden; /*For animation*/
 }
 
-/* ============= HEADER ============== */
+/*=============== HEADER ===============*/
 .header {
   width: 100%;
   background: var(--body-color);
@@ -156,7 +163,7 @@ button {
   z-index: var(--z-fixed);
 }
 
-/* ============ NAV ================ */
+/*=============== NAV ===============*/
 .nav {
   height: var(--header-height);
   display: flex;
@@ -202,7 +209,7 @@ button {
 }
 
 .nav__img {
-  width: 100%;
+  width: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -233,7 +240,7 @@ button {
   color: var(--text-color);
 }
 
-/* Show Menu */
+/* Show menu */
 .show-menu {
   top: 0;
 }
@@ -259,7 +266,7 @@ button {
   border-radius: 50%;
 }
 
-/* ================ HOME =============== */
+/*=============== HOME ===============*/
 .home__content {
   row-gap: 1rem;
 }
@@ -313,14 +320,14 @@ button {
   margin-bottom: var(--mb-1);
 }
 
-.home-title {
+.home__title {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-black);
   line-height: 109%;
   margin-bottom: var(--mb-1);
 }
 
-.home-desciption {
+.home__description {
   margin-bottom: var(--mb-1);
 }
 
@@ -329,7 +336,7 @@ button {
   justify-content: space-between;
 }
 
-/* Swiper class */
+/* Swiper Class */
 .swiper-pagination {
   position: initial;
   margin-top: var(--mb-1);
@@ -353,7 +360,7 @@ button {
   border-radius: 0.5rem;
 }
 
-/* ============= BUTTONS ============ */
+/*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -379,22 +386,21 @@ button {
   padding: 0.75rem 1.5rem;
 }
 
-.button_ghost:hover {
+.button--ghost:hover {
   background: none;
 }
 
-.button_link {
+.button--link {
   color: var(--title-color);
 }
 
-.button_flex {
+.button--flex {
   display: inline-flex;
   align-items: center;
   column-gap: 0.5rem;
 }
 
-/* ================ CATEGORY ============== */
-
+/*=============== CATEGORY ===============*/
 .category__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem 2rem;
@@ -415,10 +421,10 @@ button {
 }
 
 .category__data:hover .category__img {
-  transform: translateX(-0.5rem);
+  transform: translateY(-0.5rem);
 }
 
-/* ============== ABOUT ================ */
+/*=============== ABOUT ===============*/
 .about__container {
   row-gap: 2rem;
 }
@@ -436,7 +442,7 @@ button {
   justify-self: center;
 }
 
-/* ============= TRICK OR TREAT ============== */
+/*=============== TRICK OR TREAT ===============*/
 .trick__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -454,7 +460,7 @@ button {
 
 .trick__img {
   width: 90px;
-  transform: 0.3s;
+  transition: 0.3s;
 }
 
 .trick__subtitle,
@@ -496,7 +502,7 @@ button {
   right: 0;
 }
 
-/* ============= DISCOUNT ================== */
+/*=============== DISCOUNT ===============*/
 .discount__container {
   background: var(--container-color);
   border-radius: 1rem;
@@ -518,7 +524,7 @@ button {
   justify-self: center;
 }
 
-/* ================ NEW ARRIVALS ================== */
+/*=============== NEW ARRIVALS ===============*/
 .new__container {
   padding-top: 1rem;
 }
@@ -543,7 +549,7 @@ button {
   position: absolute;
   top: 8%;
   left: 8%;
-  background: var(--first-color);
+  background-color: var(--first-color);
   color: var(--title-color);
   font-size: var(--small-font-size);
   padding: 0.25rem 0.5rem;
@@ -600,7 +606,7 @@ button {
   right: 0;
 }
 
-/* ============== NEWSLETTER ============== */
+/*=============== NEWSLETTER ===============*/
 .newsletter__description {
   text-align: center;
   margin-bottom: var(--mb-1-5);
@@ -625,7 +631,7 @@ button {
   color: var(--text-color);
 }
 
-/* ============== FOOTER ============== */
+/*=============== FOOTER ===============*/
 .footer {
   position: relative;
   overflow: hidden;
@@ -714,19 +720,21 @@ button {
 }
 
 .footer__copy {
-  display: flex;
+  display: block;
   text-align: center;
   font-size: var(--smaller-font-size);
-  margin-top: 4rem;
+  margin-top: 4.5rem;
 }
 
-/* ============== SCROLL UP =============== */
+/*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
   background: var(--container-color);
   right: 1rem;
   bottom: -20%;
   display: inline-flex;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
   z-index: var(--z-tooltip);
   opacity: 0.8;
   transition: 0.4s;
@@ -742,12 +750,12 @@ button {
   opacity: 1;
 }
 
-/* Show Scroll Up */
+/* Show Scroll Up*/
 .show-scroll {
   bottom: 3rem;
 }
 
-/* =============== SCROLL BAR ============== */
+/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: 0.6rem;
   background: #413e3e;
@@ -758,8 +766,8 @@ button {
   border-radius: 0.5rem;
 }
 
-/* =============== BREAKPOINTS ============= */
-/* FOR SMALL DEVICES */
+/*===============  BREAKPOINTS ===============*/
+/* For small devices */
 @media screen and (max-width: 320px) {
   .container {
     margin-left: var(--mb-1);
@@ -769,7 +777,6 @@ button {
   .home__img {
     height: 200px;
   }
-
   .home__buttons {
     flex-direction: column;
     width: max-content;
@@ -783,8 +790,8 @@ button {
   }
 }
 
-/* FOR MEDIUM DEVICES */
-@media screen and (max-width: 576px) {
+/* For medium devices */
+@media screen and (min-width: 576px) {
   .about__container {
     grid-template-columns: 0.8fr;
     justify-content: center;
@@ -795,13 +802,12 @@ button {
     grid-template-columns: 0.7fr;
     justify-content: center;
   }
-
   .newsletter__description {
     padding: 0 3rem;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   body {
     margin: 0;
   }
@@ -813,18 +819,15 @@ button {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
   }
-
   .nav__img,
   .nav__close,
   .nav__toggle {
     display: none;
   }
-
   .nav__list {
     flex-direction: row;
     column-gap: 3rem;
   }
-
   .nav__link {
     text-transform: initial;
     font-weight: initial;
@@ -835,11 +838,9 @@ button {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
   }
-
   .home__img {
     height: 300px;
   }
-
   .swiper-pagination {
     margin-top: var(--mb-2);
   }
@@ -853,12 +854,10 @@ button {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
-
   .about__title,
   .about__data {
-    text-align: center;
+    text-align: initial;
   }
-
   .about__img {
     width: 250px;
   }
@@ -877,12 +876,10 @@ button {
     padding: 3rem 0;
     border-radius: 3rem;
   }
-
   .discount__img {
     width: 350px;
     order: -1;
   }
-
   .discount__data {
     padding-right: 6rem;
   }
@@ -893,8 +890,9 @@ button {
 
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
   }
-
   .footer__img-two {
     right: initial;
     bottom: 0;
@@ -986,7 +984,6 @@ button {
     border-radius: 1rem;
     padding: 2rem 0;
   }
-
   .new__img {
     width: 150px;
   }
